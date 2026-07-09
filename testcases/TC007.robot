@@ -5,7 +5,7 @@ Suite Setup      login_page.Open web and navigate to login page
 Suite Teardown   Browser.Close browser
 
 *** Test Cases ***
-TC003
+TC001
     [Tags]    test_id:TC001
     login_page.Fill email    user@doppio.com
     login_page.Fill password    Password123
