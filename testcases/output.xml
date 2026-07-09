@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.14 on darwin)" generated="2026-06-23T17:31:38.912944" rpa="false" schemaversion="5">
+<suite id="s1" name="TC001" source="/Users/doppio/Downloads/tranning_day2/testcases/TC001.robot">
+<kw name="Open web and navigate to login page" owner="login_page" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-23T17:31:39.002046" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/doppio/Downloads/tranning_day2/testcases/browser/traces/temp/883621d8-7a12-4d47-8818-42feb1c48687"}</msg>
+<msg time="2026-06-23T17:31:39.014831" level="INFO">Starting Browser process /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/Browser/wrapper/index.js using at 127.0.0.1:57742</msg>
+<msg time="2026-06-23T17:31:40.553527" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/doppio/Downloads/tranning_day2/testcases/browser/traces/temp/883621d8-7a12-4d47-8818-42feb1c48687"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-06-23T17:31:39.001807" elapsed="1.552037"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-06-23T17:31:40.555134" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "tracing": true,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-06-23T17:31:40.563466" level="INFO">Successfully created context and trace file will be saved to: /Users/doppio/Downloads/tranning_day2/testcases/browser/traces/trace_context=9d8f45c1-4bea-4177-8e1c-cac4694e48a4.zip</msg>
+<msg time="2026-06-23T17:31:40.563515" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': True, 'viewport': {'width': 1280, 'height': 720}, 'trace': {'screenshots': True, 'snapshots': True}}</msg>
+<arg>tracing=true</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-06-23T17:31:40.554095" elapsed="0.009467"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-06-23T17:31:40.757998" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-06-23T17:31:40.564688" elapsed="0.193502"/>
+</kw>
+<kw name="Go To" owner="Browser">
+<msg time="2026-06-23T17:31:40.951192" level="INFO">Successfully opened URL https://training-platform2.doppio-tech.com/signin</msg>
+<arg>url=${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-06-23T17:31:40.759609" elapsed="0.191728"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-23T17:31:40.984072" level="INFO">Waited for Element with selector css=input[data-testid="signin-email"] at state visible</msg>
+<arg>selector=css=input[data-testid="signin-email"]</arg>
+<arg>state=visible</arg>
+<arg>timeout=30s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-23T17:31:40.952405" elapsed="0.031830"/>
+</kw>
+<doc>เปิด Chromium Browser แบบ headless=False แล้วนำทางไปยัง URL ของ Doppee Shop</doc>
+<status status="PASS" start="2026-06-23T17:31:39.001618" elapsed="1.984623"/>
+</kw>
+<test id="s1-t1" name="TC001" line="8">
+<kw name="Fill email" owner="login_page">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-23T17:31:40.991995" level="INFO">Fills the text 'user@doppio.com' in the given field.</msg>
+<arg>selector=css=input[data-testid="signin-email"]</arg>
+<arg>txt=${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-23T17:31:40.990975" elapsed="0.030408"/>
+</kw>
+<arg>user@doppio.com</arg>
+<doc>กรอก email ในช่อง input ของหน้า Login</doc>
+<status status="PASS" start="2026-06-23T17:31:40.990021" elapsed="0.032545"/>
+</kw>
+<kw name="Fill password" owner="login_page">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-23T17:31:41.025444" level="INFO">Fills the text 'Password123' in the given field.</msg>
+<arg>selector=css=input[data-testid="signin-password"]</arg>
+<arg>txt=${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.024365" elapsed="0.016870"/>
+</kw>
+<arg>Password123</arg>
+<doc>กรอก password ในช่อง input ของหน้า Login</doc>
+<status status="PASS" start="2026-06-23T17:31:41.023468" elapsed="0.018849"/>
+</kw>
+<kw name="Click sign in" owner="login_page">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-23T17:31:41.045511" level="INFO">Clicks the element 'css=button[type="submit"]:text-is("Sign in")'.</msg>
+<arg>selector=css=button[type="submit"]:text-is("Sign in")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.044213" elapsed="0.046403"/>
+</kw>
+<doc>กดปุ่ม Sign In เพื่อ Submit ฟอร์ม Login</doc>
+<status status="PASS" start="2026-06-23T17:31:41.043263" elapsed="0.048257"/>
+</kw>
+<kw name="Verify signin success popup is displayed" owner="home_page">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-23T17:31:41.384446" level="INFO">Waited for Element with selector css=div:text-is("Signed in successfully"):visible at state visible</msg>
+<arg>selector=css=div:text-is("Signed in successfully"):visible</arg>
+<arg>state=visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.094666" elapsed="0.289899"/>
+</kw>
+<doc>ตรวจสอบว่า Login สำเร็จโดยรอให้ signin success popup แสดงบนหน้าจอ</doc>
+<status status="PASS" start="2026-06-23T17:31:41.092919" elapsed="0.292918"/>
+</kw>
+<kw name="Click view all button" owner="home_page">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-23T17:31:41.389294" level="INFO">Clicks the element 'id=home-featured-viewall'.</msg>
+<arg>selector=id=home-featured-viewall</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.387991" elapsed="0.078200"/>
+</kw>
+<doc>คลิกปุ่ม View All เพื่อดูสินค้าทั้งหมดในหน้าผลลัพธ์การค้นหา</doc>
+<status status="PASS" start="2026-06-23T17:31:41.386903" elapsed="0.080699"/>
+</kw>
+<kw name="Search product by name" owner="filter_page">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-23T17:31:41.471639" level="INFO">Fills the text 'Sunglasses' in the given field.</msg>
+<arg>selector=css=input[data-testid="products-search-input"]</arg>
+<arg>txt=${product_name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.470772" elapsed="0.010715"/>
+</kw>
+<arg>Sunglasses</arg>
+<doc>พิมพ์ชื่อสินค้าในช่อง Search filter</doc>
+<status status="PASS" start="2026-06-23T17:31:41.469559" elapsed="0.012772"/>
+</kw>
+<kw name="Click apply button" owner="filter_page">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-23T17:31:41.484863" level="INFO">Clicks the element 'id=btn-apply-filters'.</msg>
+<arg>selector=id=btn-apply-filters</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.483998" elapsed="0.070953"/>
+</kw>
+<doc>คลิกปุ่ม Apply เพื่อดูผลลัพธ์การค้นหาตามชื่อสินค้าที่กรอกในช่อง Search filter</doc>
+<status status="PASS" start="2026-06-23T17:31:41.483171" elapsed="0.072849"/>
+</kw>
+<kw name="Verify product is displayed as expected" owner="product_page">
+<kw name="Replace String" owner="String">
+<msg time="2026-06-23T17:31:41.558619" level="INFO">${locator} = css=li div a:text-is("Sunglasses")</msg>
+<var>${locator}</var>
+<arg>string=css=li div a:text-is("***product***")</arg>
+<arg>search_for=***product***</arg>
+<arg>replace_with=${product_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.557814" elapsed="0.000821"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-23T17:31:41.562314" level="INFO">Waited for Element with selector css=li div a:text-is("Sunglasses") at state visible</msg>
+<arg>selector=${locator}</arg>
+<arg>state=visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.559215" elapsed="0.003166"/>
+</kw>
+<arg>Sunglasses</arg>
+<doc>ตรวจสอบว่า ผลลัพธ์การค้นหาสินค้าแสดงผลตามที่คาดหวัง โดยรอให้ product item แสดงบนหน้าจอ</doc>
+<status status="PASS" start="2026-06-23T17:31:41.556921" elapsed="0.006246"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-23T17:31:42.565454" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-23T17:31:41.563904" elapsed="1.001870"/>
+</kw>
+<tag>test_id:TC001</tag>
+<status status="PASS" start="2026-06-23T17:31:40.987171" elapsed="1.584977"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2026-06-23T17:31:42.724571" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-23T17:31:42.584047" elapsed="0.140596"/>
+</kw>
+<status status="PASS" start="2026-06-23T17:31:38.913855" elapsed="3.810833"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">test_id:TC001</stat>
+</tag>
+<suite>
+<stat name="TC001" id="s1" pass="1" fail="0" skip="0">TC001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

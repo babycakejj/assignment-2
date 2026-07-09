@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on darwin)" generated="2026-06-23T11:04:08.646577" rpa="false" schemaversion="5">
+<suite id="s1" name="Training Assignment Log-Investigation" source="/Users/panuwata/Documents/GitHub/Training_Assignment_Log-Investigation">
+<suite id="s1-s1" name="Testcases" source="/Users/panuwata/Documents/GitHub/Training_Assignment_Log-Investigation/testcases">
+<suite id="s1-s1-s1" name="TC002" source="/Users/panuwata/Documents/GitHub/Training_Assignment_Log-Investigation/testcases/TC002.robot">
+<kw name="Open Browser With Tracing" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-23T11:04:08.780153" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/panuwata/Documents/GitHub/Training_Assignment_Log-Investigation/results/browser/traces/temp/2429c80f-67e5-4f5a-86e3-3ef124c5ae63"}</msg>
+<msg time="2026-06-23T11:04:08.820147" level="INFO">Starting Browser process /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/Browser/wrapper/index.js using at 127.0.0.1:53876</msg>
+<msg time="2026-06-23T11:04:10.589674" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/panuwata/Documents/GitHub/Training_Assignment_Log-Investigation/results/browser/traces/temp/2429c80f-67e5-4f5a-86e3-3ef124c5ae63"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-06-23T11:04:08.779865" elapsed="1.810079"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-06-23T11:04:10.591582" level="FAIL">ValueError: Argument 'recordVideo' got value 'True' that cannot be converted to RecordVideo or None.</msg>
+<arg>tracing=True</arg>
+<arg>recordVideo=True</arg>
+<arg>recordHar=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="FAIL" start="2026-06-23T11:04:10.590426" elapsed="0.001289">ValueError: Argument 'recordVideo' got value 'True' that cannot be converted to RecordVideo or None.</status>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>about:blank</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-06-23T11:04:10.591796" elapsed="0.000035"/>
+</kw>
+<status status="FAIL" start="2026-06-23T11:04:08.779596" elapsed="1.812320">ValueError: Argument 'recordVideo' got value 'True' that cannot be converted to RecordVideo or None.</status>
+</kw>
+<test id="s1-s1-s1-t1" name="TC01" line="21">
+<tag>tc01</tag>
+<status status="FAIL" start="2026-06-23T11:04:10.592006" elapsed="0.001793">Parent suite setup failed:
+ValueError: Argument 'recordVideo' got value 'True' that cannot be converted to RecordVideo or None.</status>
+</test>
+<kw name="Close All And Save Trace" type="TEARDOWN">
+<msg time="2026-06-23T11:04:10.596404" level="FAIL">No keyword with name 'Close All And Save Trace' found.</msg>
+<status status="FAIL" start="2026-06-23T11:04:10.596333" elapsed="0.000100">No keyword with name 'Close All And Save Trace' found.</status>
+</kw>
+<status status="FAIL" start="2026-06-23T11:04:08.664711" elapsed="1.931765">Suite setup failed:
+ValueError: Argument 'recordVideo' got value 'True' that cannot be converted to RecordVideo or None.
+
+Also suite teardown failed:
+No keyword with name 'Close All And Save Trace' found.</status>
+</suite>
+<status status="FAIL" start="2026-06-23T11:04:08.664356" elapsed="1.933742"/>
+</suite>
+<status status="FAIL" start="2026-06-23T11:04:08.647610" elapsed="1.950769"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">tc01</stat>
+</tag>
+<suite>
+<stat name="Training Assignment Log-Investigation" id="s1" pass="0" fail="1" skip="0">Training Assignment Log-Investigation</stat>
+<stat name="Testcases" id="s1-s1" pass="0" fail="1" skip="0">Training Assignment Log-Investigation.Testcases</stat>
+<stat name="TC002" id="s1-s1-s1" pass="0" fail="1" skip="0">Training Assignment Log-Investigation.Testcases.TC002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

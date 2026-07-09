@@ -1,0 +1,13 @@
+{"level":30,"time":"2026-06-23T04:04:09.177Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"Listening on 127.0.0.1:53876"}
+{"level":30,"time":"2026-06-23T04:04:10.267Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-06-23T04:04:10.588Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"Adding browser to stack: chromium, version: 147.0.7727.15"}
+{"level":30,"time":"2026-06-23T04:04:10.589Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-06-23T04:04:10.589Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-06-23T04:04:10.593Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-23T04:04:10.593Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-23T04:04:10.594Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-23T04:04:10.595Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-23T04:04:10.597Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-23T04:04:10.597Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-23T04:04:10.616Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-06-23T04:04:10.645Z","pid":32746,"hostname":"panuwatas-MacBook-Air.local","msg":"End of node method closeAllBrowsers"}
